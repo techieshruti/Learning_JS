@@ -30,3 +30,13 @@ heading1.style.fontFamily = "Arial, sans-serif";
 const para = document.createElement("p");
 para.textContent="Manali is a high-altitude Himalayan resort town in India’s northern Himachal Pradesh state. It has a reputation as a backpacking center and honeymoon destination. Set on the Beas River, it’s a gateway for skiing in the Solang Valley and trekking in Parvati Valley.";
 container.appendChild(para);
+
+const secondPara = document.createElement("p");
+secondPara.textContent="One of the must-visit places in Manali is the Hadimba Devi Temple, dedicated to Hadimba, the wife of Bhima, a hero of the Pandava clan in the epic Mahabharata. A unique fact of the temple is that it was built to honour a demoness. The temple's Pagoda-style architecture, with its four-tiered structure made of wood and stones, a metal roof, and a 24-metre-high Shikhara is a captivating feature. The nearby Vashisht village is well-known for its 4,000-year-old Vashisht temple, one of the seven great Vedic sages, known as the Saptarishis and sulphurous hot springs said to have extraordinary therapeutic properties. Adjacent to the springs, are temples honouring Lord Shiva and Lord Rama.";
+container.appendChild(secondPara);
+
+// added paragraph style
+para.style.padding="2rem";
+secondPara.style.padding="2rem";
+secondPara.style.paddingTop="0.1rem";
+
