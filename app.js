@@ -22,9 +22,27 @@ heading1.style.paddingBottom="-0.5rem";
 heading1.style.backgroundColor="#ced0f5";
 heading1.style.fontFamily = "Arial, sans-serif";
 
-// added a image
-// const image= document.createElement("img");
-// container.appendChild(image);
+//added a image
+const image= document.createElement("img");
+image.src="https://media.istockphoto.com/id/1496660180/photo/the-sissu-valley.jpg?s=612x612&w=0&k=20&c=eYg4cuYIQTZUuNa6x19ZBQI-xm-tV-t8h6MecSlYQRE=";
+container.appendChild(image);
+
+image.style.width="auto";
+image.style.boxShadow="10px 10px 10px rgb(177, 188, 229)";
+image.style.width = "90%";
+image.style.maxWidth = "600px";
+image.style.margin = "10px auto";
+image.style.borderRadius = "16px";
+image.style.transition = "box-shadow 0.8s ease-in-out"; 
+
+image.addEventListener("mouseover", ()=>{
+    image.style.boxShadow="10px 10px 10px rgb(121, 122, 123)"
+    image.style.cursor="pointer";
+})
+
+image.addEventListener("mouseleave", ()=>{
+    image.style.boxShadow="10px 10px 10px rgb(177, 188, 229)";
+})
 
 // added a paragraph
 const para = document.createElement("p");
