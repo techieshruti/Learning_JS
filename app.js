@@ -36,7 +36,35 @@ secondPara.textContent="One of the must-visit places in Manali is the Hadimba De
 container.appendChild(secondPara);
 
 // added paragraph style
+function getRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+
 para.style.padding="2rem";
 secondPara.style.padding="2rem";
 secondPara.style.paddingTop="0.1rem";
 
+para.addEventListener("mouseenter",()=>{
+    para.style.color="#0b5215";
+    para.style.fontSize="1.5rem";
+    para.style.transition="5s ease-in-out";
+})
+
+para.addEventListener("mouseleave", ()=>{
+    para.style.color="#000";
+    para.style.fontSize="1rem";
+})
+
+secondPara.addEventListener("mouseenter", ()=>{
+    secondPara.style.color=getRandomColor();
+});
+
+secondPara.addEventListener("mouseleave", ()=>{
+    secondPara.style.color="#000";
+})
