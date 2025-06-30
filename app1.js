@@ -10,7 +10,7 @@ container.appendChild(headingWrapper);
 
 headingWrapper.style.display="flex"
 headingWrapper.style.margin="2px auto"
-headingWrapper.style.backgroundColor="green";
+headingWrapper.style.backgroundColor="#ebe6e7";
 headingWrapper.style.alignItems="center"
 headingWrapper.style.justifyContent="center"
 headingWrapper.style.width="100%"
@@ -56,3 +56,17 @@ btn.style.marginTop="1.5rem"
 btn.style.padding="1rem"
 btn.style.fontSize="1rem"
 btn.style.borderRadius="2rem"
+btn.style.backgroundColor="#edd3db"
+btn.style.border="none"
+
+btn.addEventListener("mouseover", ()=>{
+    btn.style.backgroundColor="#e8a7bc"
+    btn.style.fontSize="1.5rem"
+    btn.style.transition="1s ease-in"
+    btn.style.cursor="pointer"
+})
+
+btn.addEventListener("mouseleave", ()=>{
+    btn.style.backgroundColor="#edd3db"
+    btn.style.fontSize="1rem"
+})
