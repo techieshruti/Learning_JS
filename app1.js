@@ -1,6 +1,8 @@
 const container=document.createElement("h1");
 container.textContent="🎯 Challenge: Build a User Welcome Card Page (JS Only)";
 document.body.appendChild(container);
+container.style.textAlign = "center";
+container.style.marginTop = "100px";
 
 // div container
 const headingWrapper = document.createElement("div");
@@ -31,11 +33,26 @@ headingWrapper.appendChild(title);
 // input element
 const input=document.createElement("input");
 container.appendChild(input);
-input.textContent="Enter your name";
-
+input.placeholder="Enter your name";
+input.style.padding = "10px";
+input.style.fontSize="1rem";
+input.style.border = "1px solid #ccc";
+input.style.outline="none"
+input.style.width = "250px";
+input.style.marginTop="2rem"
 
 const label=document.createElement("label");
 input.appendChild(label);
-label.textContent="Enter your name";
+input.type = "text";
+label.text="Enter your name";
 
 // button element
+const btn=document.createElement("button");
+const br=document.createElement("br");
+container.appendChild(br);
+container.appendChild(btn);
+btn.textContent="Show Welcome"
+btn.style.marginTop="1.5rem"
+btn.style.padding="1rem"
+btn.style.fontSize="1rem"
+btn.style.borderRadius="2rem"
