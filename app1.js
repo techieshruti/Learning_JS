@@ -2,7 +2,7 @@ const container=document.createElement("h1");
 container.textContent="🎯 Challenge: Build a User Welcome Card Page (JS Only)";
 document.body.appendChild(container);
 container.style.textAlign = "center";
-container.style.marginTop = "100px";
+container.style.paddingBottom = "5rem";
 
 // div container
 const headingWrapper = document.createElement("div");
@@ -76,3 +76,7 @@ container.appendChild(div)
 
 const text=document.createElement("span")
 card.appendChild(span)
+text.textContent="Welcome, "
+text.style.backgroundColor="yellow"
+text.style.padding="2rem"
+text.style.fontSize="1.5rem"
