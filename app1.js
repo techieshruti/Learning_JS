@@ -1,10 +1,10 @@
-const wel=document.createElement("h1");
-wel.textContent="🎯 Challenge: Build a User Welcome Card Page (JS Only)";
-document.body.appendChild(wel);
+const container=document.createElement("h1");
+container.textContent="🎯 Challenge: Build a User Welcome Card Page (JS Only)";
+document.body.appendChild(container);
 
 // div container
 const headingWrapper = document.createElement("div");
-document.body.appendChild(headingWrapper);
+container.appendChild(headingWrapper);
 
 headingWrapper.style.display="flex"
 headingWrapper.style.margin="2px auto"
@@ -13,7 +13,7 @@ headingWrapper.style.alignItems="center"
 headingWrapper.style.justifyContent="center"
 headingWrapper.style.width="100%"
 headingWrapper.style.height="6rem"
-// headingWrapper.style.gap=""
+headingWrapper.style.gap="1rem"
 
 // navbar
 const logo=document.createElement("img");
@@ -25,5 +25,17 @@ logo.style.height="50px";
 logo.style.borderRadius = "50%";
 
 const title=document.createElement("h2");
-title.textContent
+title.textContent="Flying Bird";
 headingWrapper.appendChild(title);
+
+// input element
+const input=document.createElement("input");
+container.appendChild(input);
+input.textContent="Enter your name";
+
+
+const label=document.createElement("label");
+input.appendChild(label);
+label.textContent="Enter your name";
+
+// button element
