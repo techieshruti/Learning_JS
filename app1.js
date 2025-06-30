@@ -59,6 +59,9 @@ btn.style.borderRadius="2rem"
 btn.style.backgroundColor="#edd3db"
 btn.style.border="none"
 
+const br1=document.createElement("br");
+container.appendChild(br1);
+
 btn.addEventListener("mouseover", ()=>{
     btn.style.backgroundColor="#e8a7bc"
     btn.style.fontSize="1.5rem"
@@ -71,12 +74,16 @@ btn.addEventListener("mouseleave", ()=>{
     btn.style.fontSize="1rem"
 })
 
-const card=document.createElement("div")
-container.appendChild(div)
+const text=document.createElement("span");
+container.appendChild(text);
 
-const text=document.createElement("span")
-card.appendChild(span)
-text.textContent="Welcome, "
-text.style.backgroundColor="yellow"
-text.style.padding="2rem"
-text.style.fontSize="1.5rem"
+text.textContent="Welcome, ";
+text.style.backgroundColor="#f5d5e8";
+text.style.padding="2rem";
+text.style.fontSize="1.5rem";
+text.style.display="none"
+
+btn.addEventListener("onclick", ()=>{
+    text.style.display="block"
+    btn.style.display="none"
+})
