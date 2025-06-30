@@ -70,3 +70,9 @@ btn.addEventListener("mouseleave", ()=>{
     btn.style.backgroundColor="#edd3db"
     btn.style.fontSize="1rem"
 })
+
+const card=document.createElement("div")
+container.appendChild(div)
+
+const text=document.createElement("span")
+card.appendChild(span)
