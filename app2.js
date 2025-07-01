@@ -33,3 +33,23 @@ for(let char in word){
 for(let c of word){
     console.log(c);
 }
+
+// 💪 Mini Task (Interactive Practice)
+let stud = ["Rahul", "Simran", "Amit"];
+console.log(stud);
+
+// push
+stud.push("Sam");
+console.log(stud);
+
+// pop
+let remove= stud.pop();
+console.log(remove);
+
+// shift
+let remove1=stud.shift();
+console.log(remove1);
+
+// unshift
+stud.unshift("remo");
+console.log(stud);
