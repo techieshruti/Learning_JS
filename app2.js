@@ -22,3 +22,9 @@ let user = { name: "Rahul", age: 22, city: "Delhi" };
 for (let name in user){
     console.log(name + ":", user[name]);
 }
+
+// 🧠 Bonus: Print characters of the word "JAVASCRIPT"
+let word="JAVASCRIPT";
+for(let char in word){
+    console.log(word[char]);
+}
