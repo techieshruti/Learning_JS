@@ -9,3 +9,16 @@ let users = ["Rahul", "Simran", "Amit"];
 users.forEach(function(greet){
     console.log("Hello "+ greet);
 });
+
+//🥉 Level 3: Keep doubling n till it reaches or passes 100
+let n = 2;
+while(n<100)
+{
+    console.log(n=n*2);
+}
+
+//🏅 Level 4: Loop over object keys
+let user = { name: "Rahul", age: 22, city: "Delhi" };
+for (let name in user){
+    console.log(name + ":", user[name]);
+}
