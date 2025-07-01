@@ -28,3 +28,8 @@ let word="JAVASCRIPT";
 for(let char in word){
     console.log(word[char]);
 }
+
+// better with charecters
+for(let c of word){
+    console.log(c);
+}
