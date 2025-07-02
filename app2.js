@@ -72,4 +72,8 @@ let red = arr2.reduce((num,acc) => acc+num,0);
 console.log(red);
 console.log(arr2);
 
-// 
+// Find first odd number in [2, 4, 5, 8] using find.
+let arr3 =[2, 4, 5, 8];
+let odd=arr3.find(num => num%2 !==0)
+console.log(odd);
+console.log(arr3);
