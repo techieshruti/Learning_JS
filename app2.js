@@ -84,3 +84,8 @@ let neg = arr4.some(num=>num<=0)
 console.log(neg);
 console.log(arr4);
 
+// Check if all numbers in [2, 4, 6] are even using every.
+let arr5 = [2, 4, 6];
+let even=arr5.every(num=>num>=1)
+console.log(even);
+console.log(arr5);
