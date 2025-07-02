@@ -53,3 +53,8 @@ console.log(remove1);
 // unshift
 stud.unshift("remo");
 console.log(stud);
+
+// Create an array [1, 2, 3, 4] and double all values using map.
+let arr=[1, 2, 3, 4];
+let double = arr.map(num=>num*2);
+console.log(double);
