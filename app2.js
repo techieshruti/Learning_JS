@@ -65,3 +65,11 @@ let arr1 = [12, 25, 8, 30];
 let age = arr1.filter(num => num>=18);
 console.log(age);
 console.log(arr1);
+
+// Sum [10, 20, 30] using reduce.
+let arr2 = [10, 20, 30];
+let red = arr2.reduce((num,acc) => acc+num,0);
+console.log(red);
+console.log(arr2);
+
+// 
