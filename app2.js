@@ -77,3 +77,10 @@ let arr3 =[2, 4, 5, 8];
 let odd=arr3.find(num => num%2 !==0)
 console.log(odd);
 console.log(arr3);
+
+// Check if any number is negative in [1, 2, -3, 4] using some.
+let arr4 = [1, 2, -3, 4];
+let neg = arr4.some(num=>num<=0)
+console.log(neg);
+console.log(arr4);
+
