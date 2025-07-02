@@ -58,3 +58,10 @@ console.log(stud);
 let arr=[1, 2, 3, 4];
 let double = arr.map(num=>num*2);
 console.log(double);
+console.log(arr);
+
+// From [12, 25, 8, 30], get only those ≥ 18 using filter.
+let arr1 = [12, 25, 8, 30];
+let age = arr1.filter(num => num>=18);
+console.log(age);
+console.log(arr1);
