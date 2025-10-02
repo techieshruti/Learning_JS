@@ -32,3 +32,31 @@ console.log("Final result =", result);
 // Inside function, p = undefined
 // Now p=50
 // Final result = 60
+
+// *****************************
+//closures
+function outer() {
+  var count = 0;
+
+  return function inner() {
+    count++;
+    console.log("Count:", count);
+  };
+}
+var counter = outer();
+counter(); // Count: 1
+counter(); // Count: 2
+counter(); // Count: 3
+
+
+function makeAdder(x) {
+  return function(y) {
+    return x + y;
+  };
+}
+
+var add5 = makeAdder(5);
+var add10 = makeAdder(10);
+
+console.log(add5(2));   // ?
+console.log(add10(3));  // ?
