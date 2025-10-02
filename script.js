@@ -60,3 +60,18 @@ var add10 = makeAdder(10);
 
 console.log(add5(2));   // ?
 console.log(add10(3));  // ?
+
+var x = 1;
+
+function outer() {
+  var x = 10;
+
+  return function inner() {
+    var x = 20;
+    console.log(x);
+  };
+}
+
+var fn = outer();
+fn();
+console.log(x);
