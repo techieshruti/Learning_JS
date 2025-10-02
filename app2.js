@@ -89,3 +89,33 @@ let arr5 = [2, 4, 6];
 let even=arr5.every(num=>num>=1)
 console.log(even);
 console.log(arr5);
+
+// 📌 Step 2: Custom .push() JS arrays are just objects with numbered keys, plus a length property.
+let myArray={
+    length: 0,
+    data : {}
+}
+
+function customPush(array, value){
+    array.data[array.length]=value;
+    array.length++;
+    return array.length;
+}
+
+customPush(myArray, "ram");
+customPush(myArray, "Simran");
+console.log(myArray);
+
+// 📌 Step 2: Custom .pop()
+function customPop(array, value){
+    if (array.length === 0) return undefined;
+
+    let lastIndex = array.length-1;
+    let remove2 = array.data[lastIndex];
+    delete array.data[lastIndex];
+    array.length--;
+    return remove2;
+}
+
+customPop(myArray); // removes 'Simran'
+console.log(myArray);
