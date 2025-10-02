@@ -7,7 +7,7 @@ console.log(b); //20
 const c = 30;
 console.log(c); //30
 
-
+//**************************************
 function multiply(a, b) {
   var result = a * b;
   return result;
@@ -18,3 +18,17 @@ var y = multiply(4, 5);
 
 console.log(x); // 6
 console.log(y); // 20
+
+//**************************************
+var p = 100;
+function test(num) {
+  console.log("Inside function, p =", p);
+  var a = 50;
+  console.log("Now a =", p);
+  return num + p;
+}
+var result = test(10);
+console.log("Final result =", result);
+// Inside function, p = undefined
+// Now p=50
+// Final result = 60
