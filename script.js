@@ -102,7 +102,7 @@ if(isNaN(n))
 // 1-n and n-1
 else{
   if (n > 0) {
-    for (let i = 0; i < n; i++) {
+    for (let i = n; i > 0; i--) {
       console.log(i);
     }
   }
