@@ -152,11 +152,20 @@ if(isNaN(n))
 
 //sum of digits
 console.log(n);
-let sum = 0;
-while(n>0)
-{
-  let ans = n%10;
-  sum += ans;
-  n=Math.floor(n/10);
+// let sum = 0;
+// while(n>0)
+// {
+//   let ans = n%10;
+//   sum += ans;
+//   n=Math.floor(n/10);
+// }
+// console.log(sum);
+
+// reverse a digit
+let rev =0;
+while(n>0){
+  let digit = n%10;
+  rev = rev*10 + digit;
+  n = Math.floor(n/10);
 }
-console.log(sum);
+console.log(rev);
