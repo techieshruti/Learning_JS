@@ -127,11 +127,26 @@ if(isNaN(n))
 // console.log(fact)
 
 // factors of a number
-for(let i=0; i<=(Math.floor(n/2)); i++)
-{
-  if(n%i==0)
+// for(let i=0; i<=(Math.floor(n/2)); i++)
+// {
+//   if(n%i==0)
+//   {
+//     console.log(i);
+//   }
+// }
+//   console.log(n);
+
+// prime numbers
+function isPrime(n){
+  if(n<=1) return false;
+  if(n ==2) return true;
+  if(n%2==0) return false;
+  for(let i=3; i<=Math.floor(Math.sqrt(n)); i+=2)
   {
-    console.log(i);
+    if(n%1==0) return false;
   }
+  return true;
 }
-  console.log(n);
+
+console.log(isPrime(n));
+
