@@ -119,9 +119,19 @@ if(isNaN(n))
 // console.log(sum)
 
 //factorial of n
-let fact=1;
-for(let i=1; i<=n; i++)
+// let fact=1;
+// for(let i=1; i<=n; i++)
+// {
+//   fact *=i;
+// }
+// console.log(fact)
+
+// factors of a number
+for(let i=0; i<=(Math.floor(n/2)); i++)
 {
-  fact *=i;
+  if(n%i==0)
+  {
+    console.log(i);
+  }
 }
-console.log(fact)
+  console.log(n);
