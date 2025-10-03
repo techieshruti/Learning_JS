@@ -111,9 +111,17 @@ if(isNaN(n))
 //   }
 // }
 // sum of n natural num
-let sum =0;
-for(let i=0; i<=n; i++)
+// let sum =0;
+// for(let i=0; i<=n; i++)
+// {
+//   sum +=i;
+// }
+// console.log(sum)
+
+//factorial of n
+let fact=1;
+for(let i=1; i<=n; i++)
 {
-  sum +=i;
+  fact *=i;
 }
-console.log(sum)
+console.log(fact)
