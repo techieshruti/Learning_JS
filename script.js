@@ -155,8 +155,8 @@ console.log(n);
 let sum = 0;
 while(n>0)
 {
-  let ans = Math.floor(n%10);
+  let ans = n%10;
   sum += ans;
-  n=n/10;
+  n=Math.floor(n/10);
 }
 console.log(sum);
