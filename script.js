@@ -100,13 +100,20 @@ if(isNaN(n))
 // }
 
 // 1-n and n-1
-else{
-  if (n > 0) {
-    for (let i = n; i > 0; i--) {
-      console.log(i);
-    }
-  }
-  else{
-    console.log("please enter any positive number");
-  }
+// else{
+//   if (n > 0) {
+//     for (let i = n; i > 0; i--) {
+//       console.log(i);
+//     }
+//   }
+//   else{
+//     console.log("please enter any positive number");
+//   }
+// }
+// sum of n natural num
+let sum =0;
+for(let i=0; i<=n; i++)
+{
+  sum +=i;
 }
+console.log(sum)
