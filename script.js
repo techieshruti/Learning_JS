@@ -137,16 +137,26 @@ if(isNaN(n))
 //   console.log(n);
 
 // prime numbers
-function isPrime(n){
-  if(n<=1) return false;
-  if(n ==2) return true;
-  if(n%2==0) return false;
-  for(let i=3; i<=Math.floor(Math.sqrt(n)); i+=2)
-  {
-    if(n%1==0) return false;
-  }
-  return true;
+// function isPrime(n){
+//   if(n<=1) return false;
+//   if(n ==2) return true;
+//   if(n%2==0) return false;
+//   for(let i=3; i<=Math.floor(Math.sqrt(n)); i+=2)
+//   {
+//     if(n%1==0) return false;
+//   }
+//   return true;
+// }
+
+// console.log(isPrime(n));
+
+//sum of digits
+console.log(n);
+let sum = 0;
+while(n>0)
+{
+  let ans = Math.floor(n%10);
+  sum += ans;
+  n=n/10;
 }
-
-console.log(isPrime(n));
-
+console.log(sum);
