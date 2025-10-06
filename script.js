@@ -189,6 +189,8 @@
 // else{
 //   console.log(`${copy} is not strong Number`);
 // }
+
+// **********pattern 1**********
 // for(let i=0; i<3; i++)
 // {
 //     let res="";
@@ -197,13 +199,23 @@
 //     }
 //     console.log(res);
 // }
-
-for(let i =0; i<5; i++)
+// **********pattern 2**********
+// for(let i =0; i<5; i++)
+// {
+//     let res = "";
+//     for(let j=0; j<i; j++)
+//     {
+//         res+="* ";
+//     }
+//     console.log(res);
+// }
+// *************pattern 3**********
+for(let i=1; i<6; i++)
 {
-    let res = "";
-    for(let j=0; j<i; j++)
+    let res="";
+    for(let j=1; j<=i; j++)
     {
-        res+="* ";
+        res+=j+" ";
     }
     console.log(res);
 }
