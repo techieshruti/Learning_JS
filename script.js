@@ -220,12 +220,22 @@
 //     console.log(res);
 // }
 // **********pattern 4*******
-for(let i=1; i<=5; i++)
+// for(let i=1; i<=5; i++)
+// {
+//     let res="";
+//     for(let j=1; j<=i; j++)
+//     {
+//         res+=i+" ";
+//     }
+//     console.log(res);
+// }
+// ************pattern 5***********
+for(let i=5; i>=1; i--)
 {
     let res="";
     for(let j=1; j<=i; j++)
     {
-        res+=i+" ";
+        res+="* ";
     }
     console.log(res);
 }
