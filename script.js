@@ -189,10 +189,10 @@
 // else{
 //   console.log(`${copy} is not strong Number`);
 // }
-for(let i=0; i<5; i++)
+for(let i=0; i<3; i++)
 {
     let res="";
-    for(let j=0; j<5; j++){
+    for(let j=0; j<4; j++){
         res+="* ";
     }
     console.log(res);
