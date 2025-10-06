@@ -249,20 +249,42 @@
 //     console.log(res);
 // }
 // ************pattern 7***********
+// let n=5;
+// for(let i=0; i<5; i++)
+// {
+//     //spaces
+//     let res="";
+//     for(let j=0; j<n-i-1; j++){
+//         res+="-";
+//     }
+//     //stars
+//     for(let j=0; j<2*i+1; j++){
+//         res+="*";
+//     }
+//     //spaces
+//     for(let j=0; j<n-i-1; j++){
+//         res+="-";
+//     }
+//     console.log(res);
+// }
+// **************pattern 8**************
 let n=5;
 for(let i=0; i<5; i++)
 {
-    //spaces
     let res="";
-    for(let j=0; j<n-i-1; j++){
+    //spaces
+    for(let j=0; j<i; j++)
+    {
         res+="-";
     }
     //stars
-    for(let j=0; j<2*i+1; j++){
+    for(let j=0; j<2*n-(2*i+1); j++)
+    {
         res+="*";
     }
     //spaces
-    for(let j=0; j<n-i-1; j++){
+    for(let j=0; j<i; j++)
+    {
         res+="-";
     }
     console.log(res);
