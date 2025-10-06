@@ -193,8 +193,7 @@ for(let i=0; i<5; i++)
 {
     let res="";
     for(let j=0; j<5; j++){
-        res+="*";
-        console.log(res);
+        res+="* ";
     }
     console.log(res);
 }
