@@ -84,11 +84,11 @@
 // console.log(factorial(5));
 
 // loops print n words
-let n = Number(prompt("enter any number"));
-if(isNaN(n))
-{
-  console.log("please enter a valid number")
-}
+// let n = Number(prompt("enter any number"));
+// if(isNaN(n))
+// {
+//   console.log("please enter a valid number")
+// }
 // else{
 //   if(n > 0) {
 //     for(let i = 0; i < n; i++) {
@@ -151,7 +151,7 @@ if(isNaN(n))
 // console.log(isPrime(n));
 
 //sum of digits
-console.log(n);
+// console.log(n);
 // let sum = 0;
 // while(n>0)
 // {
@@ -171,21 +171,28 @@ console.log(n);
 // console.log(rev);
 
 // strong number
-let copy = n;
-let sum =0;
-while(n>0){
-  let fact = 1;
-  let lastDigit = Math.floor(n%10);
-  for(let i=1; i<=lastDigit; i++)
-    {
-      fact = fact * i;
-    } 
-    sum = sum +fact;
-    n=Math.floor(n/10);
-}
-if(copy === sum){
-  console.log(`${copy} is strong Number`);
-}
-else{
-  console.log(`${copy} is not strong Number`);
+// let copy = n;
+// let sum =0;
+// while(n>0){
+//   let fact = 1;
+//   let lastDigit = Math.floor(n%10);
+//   for(let i=1; i<=lastDigit; i++)
+//     {
+//       fact = fact * i;
+//     } 
+//     sum = sum +fact;
+//     n=Math.floor(n/10);
+// }
+// if(copy === sum){
+//   console.log(`${copy} is strong Number`);
+// }
+// else{
+//   console.log(`${copy} is not strong Number`);
+// }
+
+for(let i=0;i<5;i++){
+  for(let j=0; j<5;j++){
+    console.log("* ")
+  }
+  console.log();
 }
