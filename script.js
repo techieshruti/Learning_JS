@@ -268,12 +268,12 @@
 //     console.log(res);
 // }
 // **************pattern 8**************
-// let n=5;
-// for(let i=0; i<5; i++)
-// {
-//     let res="";
-//     //spaces
-//     for(let j=0; j<i; j++)
+ let n=5;
+ for(let i=0; i<5; i++)
+ {
+     let res="";
+     //spaces
+     for(let j=0; j<i; j++)
 //     {
 //         res+="-";
 //     }
