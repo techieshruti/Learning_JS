@@ -285,9 +285,9 @@
      //spaces
      for(let j=0; j<i; j++)
      {
-//         res+="-";
-//     }
-//     console.log(res);
-// }
+         res+="-";
+     }
+     console.log(res);
+ }
 
 // ****************pattern 8*************
