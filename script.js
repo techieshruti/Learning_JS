@@ -268,24 +268,26 @@
 //     console.log(res);
 // }
 // **************pattern 8**************
-let n=5;
-for(let i=0; i<5; i++)
-{
-    let res="";
-    //spaces
-    for(let j=0; j<i; j++)
-    {
-        res+="-";
-    }
-    //stars
-    for(let j=0; j<2*n-(2*i+1); j++)
-    {
-        res+="*";
-    }
-    //spaces
-    for(let j=0; j<i; j++)
-    {
-        res+="-";
-    }
-    console.log(res);
-}
+// let n=5;
+// for(let i=0; i<5; i++)
+// {
+//     let res="";
+//     //spaces
+//     for(let j=0; j<i; j++)
+//     {
+//         res+="-";
+//     }
+//     //stars
+//     for(let j=0; j<2*n-(2*i+1); j++)
+//     {
+//         res+="*";
+//     }
+//     //spaces
+//     for(let j=0; j<i; j++)
+//     {
+//         res+="-";
+//     }
+//     console.log(res);
+// }
+
+// ****************pattern 8*************
