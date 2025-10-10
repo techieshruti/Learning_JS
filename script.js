@@ -281,10 +281,10 @@
      for(let j=0; j<2*n-(2*i+1); j++)
      {
          res+="*";
-//     }
-//     //spaces
-//     for(let j=0; j<i; j++)
-//     {
+     }
+     //spaces
+     for(let j=0; j<i; j++)
+     {
 //         res+="-";
 //     }
 //     console.log(res);
