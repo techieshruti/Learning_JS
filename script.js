@@ -288,7 +288,6 @@
          res+="-";
      }
      console.log(res);
-console.log(res);
  }
 
 // ****************pattern 8*************
