@@ -298,13 +298,22 @@ let value = 60;
 // TC- O(1) SP- O(1)
 
 // add element at start
-function addElem() {
-  for (let i = arr.length - 1; i >= 0; i--) {
-    arr[i + 1] = arr[i];
-  }
-  arr[0] = value;
-  return arr;
-}
-console.log(addElem());
+// function addElem() {
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     arr[i + 1] = arr[i];
+//   }
+//   arr[0] = value;
+//   return arr;
+// }
+// console.log(addElem());
 
 // add element at specific position
+let pos =2;
+function addAtPos(){
+    for(let i=arr.length-1; i>=pos; i--){
+    arr[i+1]=arr[i];
+}
+arr[pos]=value
+return arr;
+}
+console.log(addAtPos());
