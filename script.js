@@ -308,12 +308,28 @@ let value = 60;
 // console.log(addElem());
 
 // add element at specific position
-let pos =2;
-function addAtPos(){
-    for(let i=arr.length-1; i>=pos; i--){
-    arr[i+1]=arr[i];
-}
-arr[pos]=value
-return arr;
-}
-console.log(addAtPos());
+// let pos =2;
+// function addAtPos(){
+//     for(let i=arr.length-1; i>=pos; i--){
+//     arr[i+1]=arr[i];
+// }
+// arr[pos]=value
+// return arr;
+// }
+// console.log(addAtPos());
+
+// delete an elem from end of array
+// arr.pop();
+// arr.length=arr-length-1;
+
+// delete an elem from start of array
+// function removeEle(){
+//     for(let i = 1; i < arr.length; i++){
+//     arr[i-1]=arr[i]
+// }
+// arr.length=arr.length-1
+// return arr
+// }
+// console.log(removeEle())
+
+// delete an elem at specific pos
