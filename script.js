@@ -13,7 +13,7 @@
 //   return result;
 // }
 
-// var x = multiply(2, 3); 
+// var x = multiply(2, 3);
 // var y = multiply(4, 5);
 
 // console.log(x); // 6
@@ -47,7 +47,6 @@
 // counter(); // Count: 1
 // counter(); // Count: 2
 // counter(); // Count: 3
-
 
 // function makeAdder(x) {
 //   return function(y) {
@@ -179,7 +178,7 @@
 //   for(let i=1; i<=lastDigit; i++)
 //     {
 //       fact = fact * i;
-//     } 
+//     }
 //     sum = sum +fact;
 //     n=Math.floor(n/10);
 // }
@@ -292,18 +291,20 @@
 
 // ****************Arrays*************
 // add element at end
-let arr=[10,20,30,40,50] 
-let value =60;
+let arr = [10, 20, 30, 40, 50];
+let value = 60;
 // arr[arr.length]=value;
 // console.log(arr)
 // TC- O(1) SP- O(1)
 
 // add element at start
-for(let i = arr.length-1; i>=0; i--)
-{
-    arr[i+1]=arr[i];
+function addElem() {
+  for (let i = arr.length - 1; i >= 0; i--) {
+    arr[i + 1] = arr[i];
+  }
+  arr[0] = value;
+  return arr;
 }
-arr[0]=value;
-console.log(arr);
+console.log(addElem());
 
 // add element at specific position
