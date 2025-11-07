@@ -61,8 +61,31 @@
 /*****LEVEL 2 — MEDIUM (Combine operations + logic)*****/
 
 // 1.Insert 60 and 70 at the end of [10,20,30,40,50] without using push (use only length property).
+// let arr = [10, 20, 30, 40, 50];
+// let val=60;
+// arr[arr.length]=60;
+// arr[arr.length]=70;
+// console.log(arr)
+
+// 2.Insert 5 at start, 25 at index 2, and 60 at end of [10,20,30,40,50].
 let arr = [10, 20, 30, 40, 50];
-let val=60;
 arr[arr.length]=60;
-arr[arr.length]=70;
-console.log(arr)
+function elemInsert(){
+    for(let i=arr.length-1; i>=0; i--){
+    arr[i+1]=arr[i]
+}
+arr[0]=5;
+return arr;
+}
+console.log(elemInsert())
+
+
+function elemAtMid(arr,pos,val){
+    for(let i=arr.length-1; i>=pos; i--){
+    arr[i+1]=arr[i]
+}
+arr[pos]=val;
+return arr;
+}
+
+console.log(elemAtMid(arr,2,25))
