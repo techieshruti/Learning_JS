@@ -1,6 +1,9 @@
 // ****************Arrays*************
+
+// ******LEVEL 1 — EASY (Basics & Overwrite)*******
+
 // add element at end
-let arr = [10, 20, 30, 40, 50];
+// let arr = [10, 20, 30, 40, 50];
 // let value = 60;
 // arr[arr.length]=value;
 // console.log(arr)
@@ -51,6 +54,15 @@ let arr = [10, 20, 30, 40, 50];
 // console.log(arr)
 
 // overwrite
-console.log(arr)
-arr[1]=99
+// console.log(arr)
+// arr[1]=99
+// console.log(arr)
+
+/*****LEVEL 2 — MEDIUM (Combine operations + logic)*****/
+
+// 1.Insert 60 and 70 at the end of [10,20,30,40,50] without using push (use only length property).
+let arr = [10, 20, 30, 40, 50];
+let val=60;
+arr[arr.length]=60;
+arr[arr.length]=70;
 console.log(arr)
