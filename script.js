@@ -333,3 +333,10 @@ let value = 60;
 // console.log(removeEle())
 
 // delete an elem at specific pos
+// let pos =2
+// console.log(arr)
+// for(let i=pos; i<arr.length;i++){
+//     arr[i]=arr[i+1]
+// }
+// arr.length--;
+// console.log(arr)
