@@ -1,7 +1,7 @@
 // ****************Arrays*************
 // add element at end
 let arr = [10, 20, 30, 40, 50];
-let value = 60;
+// let value = 60;
 // arr[arr.length]=value;
 // console.log(arr)
 // TC- O(1) SP- O(1)
@@ -49,3 +49,8 @@ let value = 60;
 // }
 // arr.length--;
 // console.log(arr)
+
+// overwrite
+console.log(arr)
+arr[1]=99
+console.log(arr)
