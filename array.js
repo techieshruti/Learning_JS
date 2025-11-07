@@ -68,24 +68,37 @@
 // console.log(arr)
 
 // 2.Insert 5 at start, 25 at index 2, and 60 at end of [10,20,30,40,50].
-let arr = [10, 20, 30, 40, 50];
-arr[arr.length]=60;
-function elemInsert(){
-    for(let i=arr.length-1; i>=0; i--){
-    arr[i+1]=arr[i]
-}
-arr[0]=5;
-return arr;
-}
-console.log(elemInsert())
+// let arr = [10, 20, 30, 40, 50];
+// arr[arr.length]=60;
+// function elemInsert(){
+//     for(let i=arr.length-1; i>=0; i--){
+//     arr[i+1]=arr[i]
+// }
+// arr[0]=5;
+// return arr;
+// }
+// console.log(elemInsert())
 
 
-function elemAtMid(arr,pos,val){
-    for(let i=arr.length-1; i>=pos; i--){
-    arr[i+1]=arr[i]
-}
-arr[pos]=val;
-return arr;
-}
+// function elemAtMid(arr,pos,val){
+//     for(let i=arr.length-1; i>=pos; i--){
+//     arr[i+1]=arr[i]
+// }
+// arr[pos]=val;
+// return arr;
+// }
 
-console.log(elemAtMid(arr,2,25))
+// console.log(elemAtMid(arr,2,25))
+
+// 3.Delete the first and last element of [10,20,30,40,50].
+let arr = [10,20,30,40,50];
+arr.length--;
+function delStart(){
+    for(let i=0; i<=arr.length-1;i++){
+        arr[i]=arr[i+1]
+    }
+    arr.length--;
+    return arr;
+    
+}
+console.log(delStart())
