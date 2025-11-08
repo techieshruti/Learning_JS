@@ -166,14 +166,36 @@
 
 // 16.Rotate Array Right by 1
 // [10,20,30,40,50] → [50,10,20,30,40]
+// let arr = [10, 20, 30, 40, 50];
+// function rotate() {
+//   let val = arr[arr.length - 1];
+//   arr.length--;
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     arr[i + 1] = arr[i];
+//   }
+//   arr[0] = val;
+//   return arr;
+// }
+// console.log(rotate(arr));
+
+// 17.Rotate Array Right by given no.
+// [10,20,30,40,50] → [50,10,20,30,40]
+
+// 18.Reverse Array (manual) Swap elements using a loop until the middle.
+// Example: [10,20,30,40,50] → [50,40,30,20,10]
+
 let arr = [10, 20, 30, 40, 50];
-function rotate() {
-  let val = arr[arr.length - 1];
-  arr.length--;
-  for (let i = arr.length - 1; i >= 0; i--) {
-    arr[i + 1] = arr[i];
+
+let mid = Math.floor(arr.length / 2);
+
+function reverse() {
+  let L = 0;
+  for (let R = arr.length - 1; R >= mid; R--) {
+    if (arr[R] !== mid) {
+      [arr[L], arr[R]] = [arr[R], arr[L]];
+      L++;
+    }
+    return arr;
   }
-  arr[0] = val;
-  return arr;
 }
-console.log(rotate(arr));
+console.log(reverse());
