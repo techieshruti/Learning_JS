@@ -195,8 +195,8 @@
 //       [arr[L], arr[R]] = [arr[R], arr[L]];
 //       L++;
 //     }
-//     return arr;
 //   }
+//     return arr;
 // }
 // console.log(reverse());
 
@@ -207,6 +207,24 @@
 // 19. Insert While Maintaining Sorted Order. 
 // Insert 35 into [10,20,30,40,50] so array stays sorted.
 // (Find where 35 fits → shift right → insert.)
+let arr = [10,20,30,40,50];
+let mid = Math.floor(arr.length/2); //2
+let val=35;
+for(let i=0; i<arr.length; i++){
+    if(!(arr[i] <= val))  
+{
+    let start=arr[i] // position = start
+    for(let j=arr.length-1; j>=start; j--){
+        arr[j+1]=arr[j]
+    }
+    arr[j]=val;
+}
+}
+
+
+
+
+
 
 
 // 20. Delete All Occurrences of a Given Value
