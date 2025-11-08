@@ -145,21 +145,35 @@
 //         arr[i + 1] = temp;
 //       }
 //     }
-    
+
 //   }
 //   return arr;
 // }
-// console.log(moveZero()); 
-//*********optimized approach********/ 
-let arr =[5,0,3,0,12,0,1]
-function moveZero(){
-    let L =0;
-for(let R=0; R<=arr.length-1; R++){
-    if(arr[R] !==0){
-        [arr[L], arr[R]] = [arr[R], arr[L]]
-        L++;
-    }
+// console.log(moveZero());
+//*********optimized approach********/
+// let arr =[5,0,3,0,12,0,1]
+// function moveZero(){
+//     let L =0;
+// for(let R=0; R<=arr.length-1; R++){
+//     if(arr[R] !==0){
+//         [arr[L], arr[R]] = [arr[R], arr[L]]
+//         L++;
+//     }
+// }
+// return arr;
+// }
+// console.log(moveZero(arr))
+
+// 16.Rotate Array Right by 1
+// [10,20,30,40,50] → [50,10,20,30,40]
+let arr = [10, 20, 30, 40, 50];
+function rotate() {
+  let val = arr[arr.length - 1];
+  arr.length--;
+  for (let i = arr.length - 1; i >= 0; i--) {
+    arr[i + 1] = arr[i];
+  }
+  arr[0] = val;
+  return arr;
 }
-return arr;
-}
-console.log(moveZero(arr))
+console.log(rotate(arr));
