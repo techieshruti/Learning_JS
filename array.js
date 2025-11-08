@@ -135,19 +135,31 @@
 // console.log(even())
 
 // 15.Given [0,1,0,3,12], move all zeros to the end without using extra array.
-let arr = [0, 1, 0, 3, 12];
-function moveZero() {
-  for (let k = 0; k < arr.length; k++) {
-    for (let i = 0; i < arr.length - 1; i++) {
-      if (arr[i] === 0) {
-        let temp = arr[i];
-        arr[i] = arr[i + 1];
-        arr[i + 1] = temp;
-      }
-    }
+// let arr = [0, 1, 0, 3, 12];
+// function moveZero() {
+//   for (let k = 0; k < arr.length; k++) {
+//     for (let i = 0; i < arr.length - 1; i++) {
+//       if (arr[i] === 0) {
+//         let temp = arr[i];
+//         arr[i] = arr[i + 1];
+//         arr[i + 1] = temp;
+//       }
+//     }
     
-  }
-  return arr;
+//   }
+//   return arr;
+// }
+// console.log(moveZero()); 
+//*********optimized approach********/ 
+let arr =[5,0,3,0,12,0,1]
+function moveZero(){
+    let L =0;
+for(let R=0; R<=arr.length-1; R++){
+    if(arr[R] !==0){
+        [arr[L], arr[R]] = [arr[R], arr[L]]
+        L++;
+    }
 }
-console.log(moveZero());
-
+return arr;
+}
+console.log(moveZero(arr))
