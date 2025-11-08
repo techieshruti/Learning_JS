@@ -104,21 +104,33 @@
 // console.log(delStart())
 
 // 12.Write a function removeAt(arr, pos) that deletes the element at index pos and returns the modified array.
-let arr = [10,20,30,40,50]
-function removeAt(arr, pos){
-if(pos<0 || pos>=arr.length){
-    console.log("invalid position");
-    return arr;
-}
-else {
+// let arr = [10,20,30,40,50]
+// function removeAt(arr, pos){
+// if(pos<0 || pos>=arr.length){
+//     console.log("invalid position");
+//     return arr;
+// }
+// else {
     
-    for(let i=pos; i<=arr.length-1; i++)
-    {
-        arr[i]=arr[i+1]
-    }
-    arr.length--;
-    return arr;
+//     for(let i=pos; i<=arr.length-1; i++)
+//     {
+//         arr[i]=arr[i+1]
+//     }
+//     arr.length--;
+//     return arr;
 
+// }
+// }
+// console.log(removeAt(arr, 6));
+
+// 14.Traverse [10,15,20,25,30], replace each even number with 0
+let arr = [10,15,20,25,30];
+function even(){
+    for(let i=0; i<=arr.length-1; i++){
+    if(arr[i]%2 === 0){
+        arr[i]=0
+    }
 }
+return arr
 }
-console.log(removeAt(arr, 6));
+console.log(even())
