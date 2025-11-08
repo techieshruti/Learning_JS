@@ -60,14 +60,14 @@
 
 /*****LEVEL 2 — MEDIUM (Combine operations + logic)*****/
 
-// 1.Insert 60 and 70 at the end of [10,20,30,40,50] without using push (use only length property).
+// 9.Insert 60 and 70 at the end of [10,20,30,40,50] without using push (use only length property).
 // let arr = [10, 20, 30, 40, 50];
 // let val=60;
 // arr[arr.length]=60;
 // arr[arr.length]=70;
 // console.log(arr)
 
-// 2.Insert 5 at start, 25 at index 2, and 60 at end of [10,20,30,40,50].
+// 10.Insert 5 at start, 25 at index 2, and 60 at end of [10,20,30,40,50].
 // let arr = [10, 20, 30, 40, 50];
 // arr[arr.length]=60;
 // function elemInsert(){
@@ -90,15 +90,35 @@
 
 // console.log(elemAtMid(arr,2,25))
 
-// 3.Delete the first and last element of [10,20,30,40,50].
-let arr = [10,20,30,40,50];
-arr.length--;
-function delStart(){
-    for(let i=0; i<=arr.length-1;i++){
+// 11.Delete the first and last element of [10,20,30,40,50].
+// let arr = [10,20,30,40,50];
+// arr.length--;
+// function delStart(){
+//     for(let i=0; i<=arr.length-1;i++){
+//         arr[i]=arr[i+1]
+//     }
+//     arr.length--;
+//     return arr;
+    
+// }
+// console.log(delStart())
+
+// 12.Write a function removeAt(arr, pos) that deletes the element at index pos and returns the modified array.
+let arr = [10,20,30,40,50]
+function removeAt(arr, pos){
+if(pos<0 || pos>=arr.length){
+    console.log("invalid position");
+    return arr;
+}
+else {
+    
+    for(let i=pos; i<=arr.length-1; i++)
+    {
         arr[i]=arr[i+1]
     }
     arr.length--;
     return arr;
-    
+
 }
-console.log(delStart())
+}
+console.log(removeAt(arr, 6));
