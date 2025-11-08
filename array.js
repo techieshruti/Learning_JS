@@ -79,7 +79,6 @@
 // }
 // console.log(elemInsert())
 
-
 // function elemAtMid(arr,pos,val){
 //     for(let i=arr.length-1; i>=pos; i--){
 //     arr[i+1]=arr[i]
@@ -99,7 +98,7 @@
 //     }
 //     arr.length--;
 //     return arr;
-    
+
 // }
 // console.log(delStart())
 
@@ -111,7 +110,7 @@
 //     return arr;
 // }
 // else {
-    
+
 //     for(let i=pos; i<=arr.length-1; i++)
 //     {
 //         arr[i]=arr[i+1]
@@ -124,13 +123,31 @@
 // console.log(removeAt(arr, 6));
 
 // 14.Traverse [10,15,20,25,30], replace each even number with 0
-let arr = [10,15,20,25,30];
-function even(){
-    for(let i=0; i<=arr.length-1; i++){
-    if(arr[i]%2 === 0){
-        arr[i]=0
+// let arr = [10,15,20,25,30];
+// function even(){
+//     for(let i=0; i<=arr.length-1; i++){
+//     if(arr[i]%2 === 0){
+//         arr[i]=0
+//     }
+// }
+// return arr
+// }
+// console.log(even())
+
+// 15.Given [0,1,0,3,12], move all zeros to the end without using extra array.
+let arr = [0, 1, 0, 3, 12];
+function moveZero() {
+  for (let k = 0; k < arr.length; k++) {
+    for (let i = 0; i < arr.length - 1; i++) {
+      if (arr[i] === 0) {
+        let temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+      }
     }
+    
+  }
+  return arr;
 }
-return arr
-}
-console.log(even())
+console.log(moveZero());
+
