@@ -184,18 +184,69 @@
 // 18.Reverse Array (manual) Swap elements using a loop until the middle.
 // Example: [10,20,30,40,50] → [50,40,30,20,10]
 
-let arr = [10, 20, 30, 40, 50];
+// let arr = [10, 20, 30, 40, 50];
 
-let mid = Math.floor(arr.length / 2);
+// let mid = Math.floor(arr.length / 2);
 
-function reverse() {
-  let L = 0;
-  for (let R = arr.length - 1; R >= mid; R--) {
-    if (arr[R] !== mid) {
-      [arr[L], arr[R]] = [arr[R], arr[L]];
-      L++;
-    }
-    return arr;
-  }
-}
-console.log(reverse());
+// function reverse() {
+//   let L = 0;
+//   for (let R = arr.length - 1; R >= mid; R--) {
+//     if (arr[R] !== mid) {
+//       [arr[L], arr[R]] = [arr[R], arr[L]];
+//       L++;
+//     }
+//     return arr;
+//   }
+// }
+// console.log(reverse());
+
+//***************LEVEL 3 — HARD****************
+
+// 🎯 Goal: Combine shifting, multiple updates, and deep index control — no built-in helpers.
+
+// 19. Insert While Maintaining Sorted Order. 
+// Insert 35 into [10,20,30,40,50] so array stays sorted.
+// (Find where 35 fits → shift right → insert.)
+
+
+// 20. Delete All Occurrences of a Given Value
+// Input: [10,20,30,20,40,50,20] and value 20
+// Output: [10,30,40,50]
+
+
+// 21. Insert Multiple Values at Once
+// Insert [60,70,80] at position 3 in [10,20,30,40,50] manually.
+
+
+// 22. Remove Duplicates (without Set)
+// Input: [10,20,20,30,30,30,40]
+// Output: [10,20,30,40]
+
+
+// 23. Merge Two Sorted Arrays into One (without concat or sort)
+// [1,3,5,7] and [2,4,6,8] → [1,2,3,4,5,6,7,8]
+
+
+// 24. Rotate Array Right by K positions
+// [1,2,3,4,5,6,7] and k=3 → [5,6,7,1,2,3,4]
+// (Challenge: do it in-place.)
+
+
+// 25. Shift All Negative Numbers to Left
+// [1,-1,3,-2,4,-5] → [-1,-2,-5,1,3,4]
+// (Partition technique like in QuickSort.)
+
+
+// 26. Implement Custom Splice
+// Create mySplice(arr, pos, delCount, val) →
+// works like JS splice: removes delCount elements at pos, optionally inserts val.
+
+
+// 27. Find Missing Number (1 to n)
+// [1,2,4,5,6] → 3
+
+
+// 28. Dynamic Insertion Game
+// Start empty array [].
+// Insert random numbers at random positions (0 to current length).
+// Print the array after each insertion.
