@@ -273,20 +273,17 @@ let k = [60, 70, 80];
 
 function insertMultiple(arr, pos, k) {
   let count = k.length;
-
   // Step 1: Shift existing elements right by count
   for (let i = arr.length - 1; i >= pos; i--) {
     arr[i + count] = arr[i];
   }
-
+  console.log(arr)
   // Step 2: Insert all new elements
   for (let j = 0; j < count; j++) {
     arr[pos + j] = k[j];
   }
-
   return arr;
 }
-
 console.log(insertMultiple(arr, 3, k));
 
 
