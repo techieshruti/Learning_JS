@@ -251,23 +251,34 @@
 // 20. Delete All Occurrences of a Given Value
 // Input: [10,20,30,20,40,50,20] and value 20
 // Output: [10,30,40,50]
-let arr = [10,20,30,20,40,50,20];
-function removeOccurrences(arr,val){
-    let j=0;
-    for(let i=0; i<arr.length; i++){
-    if (arr[i] !== val) {
-      arr[j] = arr[i];
-      j++;
-    }
-    }
-arr.length=j;
-return arr;
-}
-console.log(removeOccurrences(arr,20))
+// let arr = [10,20,30,20,40,50,20];
+// function removeOccurrences(arr,val){
+//     let j=0;
+//     for(let i=0; i<arr.length; i++){
+//     if (arr[i] !== val) {
+//       arr[j] = arr[i];
+//       j++;
+//     }
+//     }
+// arr.length=j;
+// return arr;
+// }
+// console.log(removeOccurrences(arr,20))
 
 
 // 21. Insert Multiple Values at Once
 // Insert [60,70,80] at position 3 in [10,20,30,40,50] manually.
+let arr =[10,20,30,40,50];
+function insertMultiple(arr,pos,val){
+    for(let i=arr.length-1; i>=pos; i--){
+        arr[i+1]=arr[i];
+    }
+    arr[pos]=val;
+    return arr;
+}
+console.log(insertMultiple(arr,3,60))
+
+
 
 // 22. Remove Duplicates (without Set)
 // Input: [10,20,20,30,30,30,40]
