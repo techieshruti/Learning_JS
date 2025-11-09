@@ -207,30 +207,47 @@
 // 19. Insert While Maintaining Sorted Order.
 // Insert 35 into [10,20,30,40,50] so array stays sorted.
 // (Find where 35 fits → shift right → insert.)
-let arr = [10, 20, 30, 40, 50];
-let pos = arr.length;
-function insert() {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 35) {
-      pos = i;
-      break;
-    }
-  }
-  for (let i = arr.length - 1; i >= pos; i--) {
-    arr[i + 1] = arr[i];
-  }
-  arr[pos] = 35;
-  return arr;
-}
-console.log(insert());
-
-// for(let R=arr.length-1; R>=0; R--){
-//     console.log("L=",L);
-//     L++;
-//         console.log("R=",R)
-//     //
+// let arr = [10, 20, 30, 40, 50];
+// let pos = arr.length; let val=35;
+// function insert() {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 35) {
+//       pos = i;
+//       break;
+//     }
+//   }
+//   for (let i = arr.length - 1; i >= pos; i--) {
+//     arr[i + 1] = arr[i];
+//   }
+//   arr[pos] = val;
+//   return arr;
 // }
+// console.log(insert());
 
+// optimized approach
+
+let arr = [10, 20, 30, 40, 50];
+let L=0; val=35
+let R=arr.length-1;
+let P=arr.length;
+while(L<=R){
+    let mid=Math.floor((L+R)/2);
+    if(arr[mid]>val){
+        P=mid;
+    R=mid-1;
+    }
+    else{
+        L=mid+1;
+    }
+}
+
+for (let i = arr.length - 1; i >= P; i--) {
+  arr[i + 1] = arr[i];
+}
+arr[P]=val
+  console.log(arr)
+
+  
 // 20. Delete All Occurrences of a Given Value
 // Input: [10,20,30,20,40,50,20] and value 20
 // Output: [10,30,40,50]
