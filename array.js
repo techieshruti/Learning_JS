@@ -269,14 +269,15 @@
 // 21. Insert Multiple Values at Once
 // Insert [60,70,80] at position 3 in [10,20,30,40,50] manually.
 let arr =[10,20,30,40,50];
-function insertMultiple(arr,pos,val){
+let k=[60,70,80];
+function insertMultiple(arr,pos,k){
     for(let i=arr.length-1; i>=pos; i--){
         arr[i+1]=arr[i];
     }
-    arr[pos]=val;
+    arr[pos]=k;
     return arr;
 }
-console.log(insertMultiple(arr,3,60))
+console.log(insertMultiple(arr,3,k))
 
 
 
