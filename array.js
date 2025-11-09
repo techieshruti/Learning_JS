@@ -226,31 +226,45 @@
 
 // optimized approach
 
-let arr = [10, 20, 30, 40, 50];
-let L=0; val=35
-let R=arr.length-1;
-let P=arr.length;
-while(L<=R){
-    let mid=Math.floor((L+R)/2);
-    if(arr[mid]>val){
-        P=mid;
-    R=mid-1;
-    }
-    else{
-        L=mid+1;
-    }
-}
+// let arr = [10, 20, 30, 40, 50];
+// let L=0; val=35
+// let R=arr.length-1;
+// let P=arr.length;
+// while(L<=R){
+//     let mid=Math.floor((L+R)/2);
+//     if(arr[mid]>val){
+//         P=mid;
+//     R=mid-1;
+//     }
+//     else{
+//         L=mid+1;
+//     }
+// }
 
-for (let i = arr.length - 1; i >= P; i--) {
-  arr[i + 1] = arr[i];
-}
-arr[P]=val
-  console.log(arr)
+// for (let i = arr.length - 1; i >= P; i--) {
+//   arr[i + 1] = arr[i];
+// }
+// arr[P]=val
+//   console.log(arr)
 
-  
+
 // 20. Delete All Occurrences of a Given Value
 // Input: [10,20,30,20,40,50,20] and value 20
 // Output: [10,30,40,50]
+let arr = [10,20,30,20,40,50,20];
+function removeOccurrences(arr,val){
+    let j=0;
+    for(let i=0; i<arr.length; i++){
+    if (arr[i] !== val) {
+      arr[j] = arr[i];
+      j++;
+    }
+    }
+arr.length=j;
+return arr;
+}
+console.log(removeOccurrences(arr,20))
+
 
 // 21. Insert Multiple Values at Once
 // Insert [60,70,80] at position 3 in [10,20,30,40,50] manually.
