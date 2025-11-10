@@ -278,7 +278,7 @@ function insertMultiple(arr, pos, k) {
     arr[i + count] = arr[i];
   }
   console.log(arr)
-  // Step 2: Insert all new elements
+  //Step 2: Insert all new elements
   for (let j = 0; j < count; j++) {
     arr[pos + j] = k[j];
   }
