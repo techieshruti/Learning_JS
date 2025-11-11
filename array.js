@@ -282,7 +282,7 @@ function insertMultiple(arr, pos, k) {
   for (let j = 0; j < count; j++) {
     arr[pos + j] = k[j];
   }
-  return ;
+  return arr;
 }
 console.log(insertMultiple(arr, 3, k));
 
