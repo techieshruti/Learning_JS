@@ -290,6 +290,10 @@
 // Input: [10,20,20,30,30,30,40]
 // Output: [10,20,30,40]
 
+let arr=[10,20,20,30,30,30,40];
+
+
+
 // 23. Merge Two Sorted Arrays into One (without concat or sort)
 // [1,3,5,7] and [2,4,6,8] → [1,2,3,4,5,6,7,8]
 
