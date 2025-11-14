@@ -350,34 +350,48 @@
 // console.log(removeKeyoptimal(arr,3))
 
 // 2.Remove Duplicates from Sorted Array
-let arr = [1,1,2,2,2,3]
-// brute force
-function removeDuplicates(arr){
-    let newArr=[];
-    newArr[0]=arr[0];
-    let idx=1;
+// let arr = [1,1,2,2,2,3]
+// // brute force
+// function removeDuplicates(arr){
+//     let newArr=[];
+//     newArr[0]=arr[0];
+//     let idx=1;
 
-    for(let i=1; i<=arr.length-1;i++){
-        if(arr[i] !== arr[i-1]){
-            newArr[idx]=arr[i];
-            idx++;
+//     for(let i=1; i<=arr.length-1;i++){
+//         if(arr[i] !== arr[i-1]){
+//             newArr[idx]=arr[i];
+//             idx++;
+//         }
+//     }
+//     return newArr;
+// }
+// console.log(removeDuplicates(arr));
+
+// // optimal approach
+// let slow=0;
+
+// function removeDuplicatesOptimal(arr){
+// for(let fast=1; fast<=arr.length; fast++){
+//     if (arr[fast] !== arr[slow]){
+//         slow++;
+//         arr[slow]=arr[fast];
+//     }
+// }
+// arr.length=slow;
+// return arr;
+// }
+// console.log(removeDuplicatesOptimal(arr))
+
+// 3. Move All Zeros to End
+let arr = [0,1,0,2,0,3]
+
+function moveZero(arr){
+    let newArr=[];
+    for(let i=0; i<=arr.length-1; i++){
+        if(arr[i] !== 0){
+            newArr[i]=arr[i]
         }
     }
-    return newArr;
+    return newArr
 }
-console.log(removeDuplicates(arr));
-
-// optimal approach
-let slow=0;
-
-function removeDuplicatesOptimal(arr){
-for(let fast=1; fast<=arr.length; fast++){
-    if (arr[fast] !== arr[slow]){
-        slow++;
-        arr[slow]=arr[fast];
-    }
-}
-arr.length=slow;
-return arr;
-}
-console.log(removeDuplicatesOptimal(arr))
+console.log(moveZero(arr))
