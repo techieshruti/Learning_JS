@@ -322,29 +322,47 @@
 // **********Fast and Slow Pointer**************
 // *********************************************
 // 1.Removing All Occurrences of a Key
-let arr = [3,1,2,3,4,3]; let key = 3; 
+// let arr = [3,1,2,3,4,3]; let key = 3; 
 
+// // brute force
+// function removeKeyBrute(arr, key) {
+//   let newArr = [];
+//   for (let num of arr) {
+//     if (num !== key) newArr.push(num);
+//   }
+//   return newArr;
+// }
+// console.log(removeKeyBrute(arr,3))
+// // TC - O(n) SC- O(N)
+
+// // Optimal approach
+// function removeKeyoptimal(arr, key){
+//     let slow=0;
+//     for(let fast=0; fast<=arr.length-1;fast++){
+//         if(arr[fast] !== key){
+//             arr[slow]=arr[fast];
+//             slow++;
+//         }
+//     }
+//     arr.length = slow;
+//     return arr;
+// }
+// console.log(removeKeyoptimal(arr,3))
+
+// 2.Remove Duplicates from Sorted Array
+let arr = [1,1,2,2,2,3]
 // brute force
-function removeKeyBrute(arr, key) {
-  let newArr = [];
-  for (let num of arr) {
-    if (num !== key) newArr.push(num);
-  }
-  return newArr;
-}
-console.log(removeKeyBrute(arr,3))
-// TC - O(n) SC- O(N)
+function removeDuplicates(arr){
+    let newArr=[];
+    newArr[0]=arr[0];
+    let idx=1;
 
-// Optimal approach
-function removeKeyoptimal(arr, key){
-    let slow=0;
-    for(let fast=0; fast<=arr.length-1;fast++){
-        if(arr[fast] !== key){
-            arr[slow]=arr[fast];
-            slow++;
+    for(let i=1; i<=arr.length-1;i++){
+        if(arr[i] !== arr[i-1]){
+            newArr[idx]=arr[i];
+            idx++;
         }
     }
-    arr.length = slow;
-    return arr;
+    return newArr;
 }
-console.log(removeKeyoptimal(arr,3))
+console.log(removeDuplicates(arr))
