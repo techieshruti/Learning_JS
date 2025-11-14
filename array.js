@@ -336,3 +336,15 @@ console.log(removeKeyBrute(arr,3))
 // TC - O(n) SC- O(N)
 
 // Optimal approach
+function removeKeyoptimal(arr, key){
+    let slow=0;
+    for(let fast=0; fast<=arr.length-1;fast++){
+        if(arr[fast] !== key){
+            arr[slow]=arr[fast];
+            slow++;
+        }
+    }
+    arr.length = slow;
+    return arr;
+}
+console.log(removeKeyoptimal(arr,3))
