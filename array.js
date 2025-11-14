@@ -290,7 +290,7 @@
 // Input: [10,20,20,30,30,30,40]
 // Output: [10,20,30,40]
 
-let arr=[10,20,20,30,30,30,40];
+// let arr=[10,20,20,30,30,30,40];
 
 
 
@@ -316,3 +316,23 @@ let arr=[10,20,20,30,30,30,40];
 // Start empty array [].
 // Insert random numbers at random positions (0 to current length).
 // Print the array after each insertion.
+
+
+// *********************************************
+// **********Fast and Slow Pointer**************
+// *********************************************
+// 1.Removing All Occurrences of a Key
+let arr = [3,1,2,3,4,3]; let key = 3; 
+
+// brute force
+function removeKeyBrute(arr, key) {
+  let newArr = [];
+  for (let num of arr) {
+    if (num !== key) newArr.push(num);
+  }
+  return newArr;
+}
+console.log(removeKeyBrute(arr,3))
+// TC - O(n) SC- O(N)
+
+// Optimal approach
