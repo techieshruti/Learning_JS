@@ -365,4 +365,19 @@ function removeDuplicates(arr){
     }
     return newArr;
 }
-console.log(removeDuplicates(arr))
+console.log(removeDuplicates(arr));
+
+// optimal approach
+let slow=0;
+
+function removeDuplicatesOptimal(arr){
+for(let fast=1; fast<=arr.length; fast++){
+    if (arr[fast] !== arr[slow]){
+        slow++;
+        arr[slow]=arr[fast];
+    }
+}
+arr.length=slow;
+return arr;
+}
+console.log(removeDuplicatesOptimal(arr))
