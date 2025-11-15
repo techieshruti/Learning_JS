@@ -392,6 +392,6 @@ function moveZero(arr){
             newArr[i]=arr[i]
         }
     }
-    return 
+    return newArr
 }
 console.log(moveZero(arr))
