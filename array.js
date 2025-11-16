@@ -427,7 +427,7 @@
 // }
 // console.log(removeNegative(arr))
 
-// 5.Copy only even/odd numbers
+// 5.Copy only even numbers
 let arr = [2,3,4,5,6,7,8,9,10]
 function copyEven(arr){
     let slow =0;
