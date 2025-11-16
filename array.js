@@ -383,15 +383,31 @@
 // console.log(removeDuplicatesOptimal(arr))
 
 // 3. Move All Zeros to End
-let arr = [0,1,0,2,0,3]
+// let arr = [0,1,0,2,0,3]
 
-function moveZero(arr){
-    let newArr=[];
-    for(let i=0; i<=arr.length-1; i++){
-        if(arr[i] !== 0){
-            newArr[i]=arr[i]
+// function moveZero(arr){
+//     let newArr=[];
+//     for(let i=0; i<=arr.length-1; i++){
+//         if(arr[i] !== 0){
+//             newArr[i]=arr[i]
+//         }
+//     }
+//     return newArr
+// }
+// console.log(moveZero(arr))
+
+// 4. Remove all zeroes from array
+let arr = [0,10,0,20,30,0,40]
+
+function removeZero(arr){
+    let slow=0;
+    for(let fast = 0; fast <= arr.length-1; fast++){
+        if(arr[fast] !== 0){
+            arr[slow]=arr[fast];
+            slow++;
         }
     }
-    return newArr
+    arr.length=slow;
+    return arr;
 }
-console.log(moveZero(arr))
+console.log(removeZero(arr))
