@@ -397,17 +397,32 @@
 // console.log(moveZero(arr))
 
 // 4. Remove all zeroes from array
-let arr = [0,10,0,20,30,0,40]
+// let arr = [0,10,0,20,30,0,40]
 
-function removeZero(arr){
+// function removeZero(arr){
+//     let slow=0;
+//     for(let fast = 0; fast <= arr.length-1; fast++){
+//         if(arr[fast] !== 0){
+//             arr[slow]=arr[fast];
+//             slow++;
+//         }
+//     }
+//     arr.length=slow;
+//     return arr;
+// }
+// console.log(removeZero(arr))
+
+// 4. Remove negative numbers
+let arr=[0,2,-2,-66,9,-10]
+function removeNegative(arr){
     let slow=0;
-    for(let fast = 0; fast <= arr.length-1; fast++){
-        if(arr[fast] !== 0){
-            arr[slow]=arr[fast];
+    for(let fast=0; fast <= arr.length; fast++){
+        if((arr[fast] >= 0)){
+            arr[slow] = arr[fast];
             slow++;
         }
     }
     arr.length=slow;
     return arr;
 }
-console.log(removeZero(arr))
+console.log(removeNegative(arr))
