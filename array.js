@@ -428,16 +428,32 @@
 // console.log(removeNegative(arr))
 
 // 5.Copy only even numbers
-let arr = [2,3,4,5,6,7,8,9,10]
-function copyEven(arr){
-    let slow =0;
-    for(let fast =0; fast<=arr.length-1; fast++){
-        if(arr[fast] % 2 ==0){
-            arr[slow]=arr[fast];
+// let arr = [2,3,4,5,6,7,8,9,10]
+// function copyEven(arr){
+//     let slow =0;
+//     for(let fast =0; fast<=arr.length-1; fast++){
+//         if(arr[fast] % 2 ==0){
+//             arr[slow]=arr[fast];
+//             slow++;
+//         }
+//     }
+//     arr.length=slow;
+//     return arr;
+// }
+// console.log(copyEven(arr))
+
+// 6. Remove duplicates from sorted array
+
+// 7.Move all zeroes to end (LeetCode 283)Move all zeroes to end (LeetCode 283)
+number = [0,1,0,3,12]
+function moveZeroes(number) {
+    let slow=0;
+    for(let fast=0; fast<=number.length-1; fast++){
+        if(number[fast] !== 0){
+            [number[fast], number[slow]] = [number[slow], number[fast]];
             slow++;
         }
     }
-    arr.length=slow;
-    return arr;
-}
-console.log(copyEven(arr))
+    return number
+};
+console.log(moveZeroes(number))
