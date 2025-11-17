@@ -443,17 +443,32 @@
 // console.log(copyEven(arr))
 
 // 6. Remove duplicates from sorted array
-
-// 7.Move all zeroes to end (LeetCode 283)Move all zeroes to end (LeetCode 283)
-number = [0,1,0,3,12]
-function moveZeroes(number) {
+let arr = [1,2,2,3,3,3,4,4,4,4]
+function removeDuplicates(arr){
     let slow=0;
-    for(let fast=0; fast<=number.length-1; fast++){
-        if(number[fast] !== 0){
-            [number[fast], number[slow]] = [number[slow], number[fast]];
+   for(let fast =1; fast<=arr.length-1; fast++){
+        if(arr[fast] !== arr[slow]){
             slow++;
+            arr[slow] = arr[fast]
         }
     }
-    return number
-};
-console.log(moveZeroes(number))
+    slow++;
+    arr.length=slow
+    return arr;
+}
+console.log(removeDuplicates(arr));
+
+
+// // 7.Move all zeroes to end (LeetCode 283)Move all zeroes to end (LeetCode 283)
+// number = [0,1,0,3,12]
+// function moveZeroes(number) {
+//     let slow=0;
+//     for(let fast=0; fast<=number.length-1; fast++){
+//         if(number[fast] !== 0){
+//             [number[fast], number[slow]] = [number[slow], number[fast]];
+//             slow++;
+//         }
+//     }
+//     return number
+// };
+// console.log(moveZeroes(number))
