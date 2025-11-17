@@ -442,21 +442,21 @@
 // }
 // console.log(copyEven(arr))
 
-// 6. Remove duplicates from sorted array
-let arr = [1,2,2,3,3,3,4,4,4,4]
-function removeDuplicates(arr){
-    let slow=0;
-   for(let fast =1; fast<=arr.length-1; fast++){
-        if(arr[fast] !== arr[slow]){
-            slow++;
-            arr[slow] = arr[fast]
-        }
-    }
-    slow++;
-    arr.length=slow
-    return arr;
-}
-console.log(removeDuplicates(arr));
+// // 6. Remove duplicates from sorted array
+// let arr = [1,2,2,3,3,3,4,4,4,4]
+// function removeDuplicates(arr){
+//     let slow=0;
+//    for(let fast =1; fast<=arr.length-1; fast++){
+//         if(arr[fast] !== arr[slow]){
+//             slow++;
+//             arr[slow] = arr[fast]
+//         }
+//     }
+//     slow++;
+//     arr.length=slow
+//     return arr;
+// }
+// console.log(removeDuplicates(arr));
 
 
 // // 7.Move all zeroes to end (LeetCode 283)Move all zeroes to end (LeetCode 283)
@@ -472,3 +472,19 @@ console.log(removeDuplicates(arr));
 //     return number
 // };
 // console.log(moveZeroes(number))
+
+// 7.Sort array by parity (even first)
+let arr=[1,2,3,4,5,6,7,8,9,10]
+// op : [2,4,6,8,10,1,3,5,7,9]
+function sortEven(arr){
+    let slow=0;
+    for(let fast=0; fast <= arr.length-1; fast++){
+        if(arr[fast] % 2 === 0){
+            [arr[slow], arr[fast]] = [arr[fast], arr[slow]]
+            slow++;
+        }
+    }
+    return arr;
+}
+
+console.log(sortEven(arr))
