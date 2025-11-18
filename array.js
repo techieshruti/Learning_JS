@@ -490,4 +490,20 @@
 // console.log(sortEven(arr))
 
 // 8. Remove duplicates allowing at most 2 occurrences [0,0,1,1,2,2,3,3,4]
-let arr=[0,0,0,1,1,1,1,2,2,3,3,3,4] 
+let nums=[0,0,0,1,1,1,1,2,2,3,3,3,4] 
+function removeDuplicatesII(nums) {
+    if (nums.length <= 2) return nums.length;
+
+    let slow = 2; // First two elements are always allowed
+
+    for (let fast = 2; fast < nums.length; fast++) {
+        if (nums[fast] !== nums[slow - 2]) {
+            nums[slow] = nums[fast];
+            slow++;
+        }
+    }
+
+    nums.length = slow;
+    return nums;
+}
+console.log(removeDuplicatesII(nums))
