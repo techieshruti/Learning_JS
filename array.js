@@ -473,18 +473,21 @@
 // };
 // console.log(moveZeroes(number))
 
-// 7.Sort array by parity (even first)
-let arr=[1,2,3,4,5,6,7,8,9,10]
-// op : [2,4,6,8,10,1,3,5,7,9]
-function sortEven(arr){
-    let slow=0;
-    for(let fast=0; fast <= arr.length-1; fast++){
-        if(arr[fast] % 2 === 0){
-            [arr[slow], arr[fast]] = [arr[fast], arr[slow]]
-            slow++;
-        }
-    }
-    return arr;
-}
+// // 7.Sort array by parity (even first)
+// let arr=[1,2,3,4,5,6,7,8,9,10]
+// // op : [2,4,6,8,10,1,3,5,7,9]
+// function sortEven(arr){
+//     let slow=0;
+//     for(let fast=0; fast <= arr.length-1; fast++){
+//         if(arr[fast] % 2 === 0){
+//             [arr[slow], arr[fast]] = [arr[fast], arr[slow]]
+//             slow++;
+//         }
+//     }
+//     return arr;
+// }
 
-console.log(sortEven(arr))
+// console.log(sortEven(arr))
+
+// 8. Remove duplicates allowing at most 2 occurrences [0,0,1,1,2,2,3,3,4]
+let arr=[0,0,0,1,1,1,1,2,2,3,3,3,4] 
