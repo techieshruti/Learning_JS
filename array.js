@@ -509,3 +509,33 @@
 // console.log(removeDuplicatesII(nums))
 
 // 9. Compress characters (LeetCode 443)
+var compress = function(chars) {
+    let writeIdx = 0; // Pointer for writing the compressed characters
+    let readIdx = 0; // Pointer for reading the original characters
+
+    while (readIdx < chars.length) {
+        let currentChar = chars[readIdx];
+        let count = 0;
+
+        // Count consecutive occurrences of the current character
+        while (readIdx < chars.length && chars[readIdx] === currentChar) {
+            count++;
+            readIdx++;
+        }
+
+        // Write the character
+        chars[writeIdx] = currentChar;
+        writeIdx++;
+
+        // Write the count if it's greater than 1
+        if (count > 1) {
+            let countStr = count.toString();
+            for (let i = 0; i < countStr.length; i++) {
+                chars[writeIdx] = countStr[i];
+                writeIdx++;
+            }
+        }
+    }
+
+    return writeIdx; // The new length of the compressed array
+};
