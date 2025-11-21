@@ -540,7 +540,7 @@ var compress = function(chars) {
     return writeIdx; // The new length of the compressed array
 };
 
-//leetcode 35.
+//leetcode 35 Search Insert Position.
 var searchInsert = function(nums, target) {
     let left = 0;
     let right = nums.length - 1;
