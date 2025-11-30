@@ -459,102 +459,120 @@
 // console.log(removeDuplicates(arr));
 
 
-// // 7.Move all zeroes to end (LeetCode 283)Move all zeroes to end (LeetCode 283)
-// number = [0,1,0,3,12]
-// function moveZeroes(number) {
-//     let slow=0;
-//     for(let fast=0; fast<=number.length-1; fast++){
-//         if(number[fast] !== 0){
-//             [number[fast], number[slow]] = [number[slow], number[fast]];
-//             slow++;
+// // // 7.Move all zeroes to end (LeetCode 283)Move all zeroes to end (LeetCode 283)
+// // number = [0,1,0,3,12]
+// // function moveZeroes(number) {
+// //     let slow=0;
+// //     for(let fast=0; fast<=number.length-1; fast++){
+// //         if(number[fast] !== 0){
+// //             [number[fast], number[slow]] = [number[slow], number[fast]];
+// //             slow++;
+// //         }
+// //     }
+// //     return number
+// // };
+// // console.log(moveZeroes(number))
+
+// // // 7.Sort array by parity (even first)
+// // let arr=[1,2,3,4,5,6,7,8,9,10]
+// // // op : [2,4,6,8,10,1,3,5,7,9]
+// // function sortEven(arr){
+// //     let slow=0;
+// //     for(let fast=0; fast <= arr.length-1; fast++){
+// //         if(arr[fast] % 2 === 0){
+// //             [arr[slow], arr[fast]] = [arr[fast], arr[slow]]
+// //             slow++;
+// //         }
+// //     }
+// //     return arr;
+// // }
+
+// // console.log(sortEven(arr))
+
+// // 8. Remove duplicates allowing at most 2 occurrences [0,0,1,1,2,2,3,3,4]
+// // let nums=[0,0,0,1,1,1,1,2,2,3,3,3,4] 
+// // function removeDuplicatesII(nums) {
+// //     if (nums.length <= 2) return nums.length;
+
+// //     let slow = 2; // First two elements are always allowed
+
+// //     for (let fast = 2; fast < nums.length; fast++) {
+// //         if (nums[fast] !== nums[slow - 2]) {
+// //             nums[slow] = nums[fast];
+// //             slow++;
+// //         }
+// //     }
+
+// //     nums.length = slow;
+// //     return slow, nums;
+// // }
+// // console.log(removeDuplicatesII(nums))
+
+// // 9. Compress characters (LeetCode 443)
+// var compress = function(chars) {
+//     let writeIdx = 0; // Pointer for writing the compressed characters
+//     let readIdx = 0; // Pointer for reading the original characters
+
+//     while (readIdx < chars.length) {
+//         let currentChar = chars[readIdx];
+//         let count = 0;
+
+//         // Count consecutive occurrences of the current character
+//         while (readIdx < chars.length && chars[readIdx] === currentChar) {
+//             count++;
+//             readIdx++;
+//         }
+
+//         // Write the character
+//         chars[writeIdx] = currentChar;
+//         writeIdx++;
+
+//         // Write the count if it's greater than 1
+//         if (count > 1) {
+//             let countStr = count.toString();
+//             for (let i = 0; i < countStr.length; i++) {
+//                 chars[writeIdx] = countStr[i];
+//                 writeIdx++;
+//             }
 //         }
 //     }
-//     return number
+
+//     return writeIdx; // The new length of the compressed array
 // };
-// console.log(moveZeroes(number))
 
-// // 7.Sort array by parity (even first)
-// let arr=[1,2,3,4,5,6,7,8,9,10]
-// // op : [2,4,6,8,10,1,3,5,7,9]
-// function sortEven(arr){
-//     let slow=0;
-//     for(let fast=0; fast <= arr.length-1; fast++){
-//         if(arr[fast] % 2 === 0){
-//             [arr[slow], arr[fast]] = [arr[fast], arr[slow]]
-//             slow++;
+// //leetcode 35 Search Insert Position.
+// var searchInsert = function(nums, target) {
+//     let left = 0;
+//     let right = nums.length - 1;
+
+//     while (left <= right) {
+//         const mid = Math.floor((left + right) / 2);
+
+//         if (nums[mid] === target) {
+//             return mid; // Target found, return its index
+//         } else if (nums[mid] < target) {
+//             left = mid + 1; // Target is in the right half
+//         } else {
+//             right = mid - 1; // Target is in the left half
 //         }
 //     }
-//     return arr;
-// }
+//     return left;
+// };
 
-// console.log(sortEven(arr))
+// LC 125 — Valid Palindrome Input: s = "race a car"
+let arr = [10,20,10];
+let L=0; let R=arr.length-1;
 
-// 8. Remove duplicates allowing at most 2 occurrences [0,0,1,1,2,2,3,3,4]
-// let nums=[0,0,0,1,1,1,1,2,2,3,3,3,4] 
-// function removeDuplicatesII(nums) {
-//     if (nums.length <= 2) return nums.length;
-
-//     let slow = 2; // First two elements are always allowed
-
-//     for (let fast = 2; fast < nums.length; fast++) {
-//         if (nums[fast] !== nums[slow - 2]) {
-//             nums[slow] = nums[fast];
-//             slow++;
-//         }
-//     }
-
-//     nums.length = slow;
-//     return slow, nums;
-// }
-// console.log(removeDuplicatesII(nums))
-
-// 9. Compress characters (LeetCode 443)
-var compress = function(chars) {
-    let writeIdx = 0; // Pointer for writing the compressed characters
-    let readIdx = 0; // Pointer for reading the original characters
-
-    while (readIdx < chars.length) {
-        let currentChar = chars[readIdx];
-        let count = 0;
-
-        // Count consecutive occurrences of the current character
-        while (readIdx < chars.length && chars[readIdx] === currentChar) {
-            count++;
-            readIdx++;
-        }
-
-        // Write the character
-        chars[writeIdx] = currentChar;
-        writeIdx++;
-
-        // Write the count if it's greater than 1
-        if (count > 1) {
-            let countStr = count.toString();
-            for (let i = 0; i < countStr.length; i++) {
-                chars[writeIdx] = countStr[i];
-                writeIdx++;
-            }
-        }
+function palindrome(arr){
+    
+while(L<R){
+    if(arr[L] !== arr[R]){
+       return false;
     }
+    L++;
+    R--;
+}
+return true;
+}
 
-    return writeIdx; // The new length of the compressed array
-};
-
-//leetcode 35 Search Insert Position.
-var searchInsert = function(nums, target) {
-    let left = 0;
-    let right = nums.length - 1;
-
-    while (left <= right) {
-        const mid = Math.floor((left + right) / 2);
-
-        if (nums[mid] === target) {
-            return mid; // Target found, return its index
-        } else if (nums[mid] < target) {
-            left = mid + 1; // Target is in the right half
-        } else {
-            right = mid - 1; // Target is in the left half
-        }
-    }
-    return left;
-};
+console.log(palindrome(arr));
