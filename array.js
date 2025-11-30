@@ -578,15 +578,18 @@
 // console.log(palindrome(arr));
 
 // LC 344 — Reverse String
-let str = [10,20,30,40,50]
-let L=0; let R = str.length-1;
-function reverse(str){
-    while(L<R)
-    {
-        [str[L], str[R]]= [str[R], str[L]];
-        L++;
-        R--;
-    }
-    return str;
-}
-console.log(reverse(str));
+// let str = [10,20,30,40,50]
+// let str = ["h","e","l","l","o"]
+// let L=0; let R = str.length-1;
+// function reverse(str){
+//     while(L<R)
+//     {
+//         [str[L], str[R]]= [str[R], str[L]];
+//         L++;
+//         R--;
+//     }
+//     return str;
+// }
+// console.log(reverse(str));
+
+// LC-977
