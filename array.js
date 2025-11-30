@@ -593,14 +593,39 @@
 // console.log(reverse(str));
 
 // LC-977 Squares of a Sorted Array
-let arr = [-4, -1, 0, 3, 10]
+// let arr = [-4, -1, 0, 3, 10]
+// function square(arr){
+//     for(let i =0; i<=arr.length-1; i++){
+//         arr[i]=arr[i]*arr[i];
+//     }
+//     // arr
+//     let L=0; R=arr.length-1
+//     arr.sort((a, b) => a - b);
+//     return arr;
+// }
+// console.log(square(arr));
+
+let arr = [-4, -1, 0, 3, 10];
+
 function square(arr){
-    for(let i =0; i<=arr.length-1; i++){
-        arr[i]=arr[i]*arr[i];
+    let L=0; R= arr.length-1;
+    let res= new Array(arr.length);
+    let index=arr.length-1;
+
+    while(L<=R){
+        let leftsquare = arr[L]*arr[L];
+        let rightsquare = arr[R]*arr[R]
+
+        if(leftsquare > rightsquare){
+            res[index]=leftsquare;
+            L++;
+        }
+        else {
+            res[index]=rightsquare;
+            R--;
+        }
+        index--;
     }
-    // arr
-    let L=0; R=arr.length-1
-    arr.sort((a, b) => a - b);
-    return arr;
+    return res;
 }
 console.log(square(arr));
