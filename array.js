@@ -560,19 +560,24 @@
 // };
 
 // LC 125 — Valid Palindrome Input: s = "race a car"
-let arr = [10,20,10];
-let L=0; let R=arr.length-1;
+// let arr = "race a car";
+// let L=0; let R=arr.length-1;
 
-function palindrome(arr){
-    
-while(L<R){
-    if(arr[L] !== arr[R]){
-       return false;
-    }
-    L++;
-    R--;
-}
-return true;
-}
+// function palindrome(arr){
+    // s= s.toLowerCase().replace(/[^a-z0-9]/g, '');
+// while(L<R){
+//     if(arr[L] !== arr[R]){
+//        return false;
+//     }
+//     L++;
+//     R--;
+// }
+// return true;
+// }
 
-console.log(palindrome(arr));
+// console.log(palindrome(arr));
+
+// LC 344 — Reverse String
+let arr = [10,20,30,40,50]
+let L=0; let R = arr.length-1;
+function reverse 
