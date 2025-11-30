@@ -592,4 +592,15 @@
 // }
 // console.log(reverse(str));
 
-// LC-977
+// LC-977 Squares of a Sorted Array
+let arr = [-4, -1, 0, 3, 10]
+function square(arr){
+    for(let i =0; i<=arr.length-1; i++){
+        arr[i]=arr[i]*arr[i];
+    }
+    // arr
+    let L=0; R=arr.length-1
+    arr.sort((a, b) => a - b);
+    return arr;
+}
+console.log(square(arr));
