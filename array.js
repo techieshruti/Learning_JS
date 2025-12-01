@@ -631,32 +631,49 @@
 // console.log(square(arr));
 
 // LC 392 — Is Subsequence s = "abc"  t = "ahbgdc"
-let s = "abc"  
-let t = "ahbgdc"
+// let s = "abc"  
+// let t = "ahbgdc"
 
- function subsequence(s, t) {
-    let i = 0; // pointer for s
-    let j = 0; // pointer for t
+//  function subsequence(s, t) {
+//     let i = 0; // pointer for s
+//     let j = 0; // pointer for t
 
-    while (i < s.length && j < t.length) {
-        if (s[i] === t[j]) {
-            i++; // matched one char of s
+//     while (i < s.length && j < t.length) {
+//         if (s[i] === t[j]) {
+//             i++; // matched one char of s
+//         }
+//         j++; // always move in t
+//     }
+
+//     return i === s.length;
+// }
+//  console.log(subsequence(s,t))
+
+//  function bruteCheck(s, t) {
+//     let i = 0;
+
+//     for (let j = 0; j < t.length; j++) {
+//         if (t[j] === s[i]) {
+//             i++;
+//         }
+//     }
+
+//     return i === s.length;
+// }
+
+// LC 1- two sum 
+
+let nums = [2,7,11,15];
+let target = 9;
+
+for(let i=0; i<=nums.length-1; i++){
+    for(let j=1; j<=nums.length-1; j++)
+    {
+        let sum = nums[i]+nums[j];
+        if(sum === target){
+            console.log(i,j)
         }
-        j++; // always move in t
     }
-
-    return i === s.length;
 }
- console.log(subsequence(s,t))
 
- function bruteCheck(s, t) {
-    let i = 0;
-
-    for (let j = 0; j < t.length; j++) {
-        if (t[j] === s[i]) {
-            i++;
-        }
-    }
-
-    return i === s.length;
-}
+// LC 167 - two sum ll input array is sorted
