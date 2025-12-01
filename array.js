@@ -605,27 +605,46 @@
 // }
 // console.log(square(arr));
 
-let arr = [-4, -1, 0, 3, 10];
+// let arr = [-4, -1, 0, 3, 10];
 
-function square(arr){
-    let L=0; R= arr.length-1;
-    let res= new Array(arr.length);
-    let index=arr.length-1;
+// function square(arr){
+//     let L=0; R= arr.length-1;
+//     let res= new Array(arr.length);
+//     let index=arr.length-1;
 
-    while(L<=R){
-        let leftsquare = arr[L]*arr[L];
-        let rightsquare = arr[R]*arr[R]
+//     while(L<=R){
+//         let leftsquare = arr[L]*arr[L];
+//         let rightsquare = arr[R]*arr[R]
 
-        if(leftsquare > rightsquare){
-            res[index]=leftsquare;
-            L++;
+//         if(leftsquare > rightsquare){
+//             res[index]=leftsquare;
+//             L++;
+//         }
+//         else {
+//             res[index]=rightsquare;
+//             R--;
+//         }
+//         index--;
+//     }
+//     return res;
+// }
+// console.log(square(arr));
+
+// LC 392 — Is Subsequence s = "abc"  t = "ahbgdc"
+let s = "abc"  
+let t = "ahbgdc"
+
+ function subsequence(s, t) {
+    let i = 0; // pointer for s
+    let j = 0; // pointer for t
+
+    while (i < s.length && j < t.length) {
+        if (s[i] === t[j]) {
+            i++; // matched one char of s
         }
-        else {
-            res[index]=rightsquare;
-            R--;
-        }
-        index--;
+        j++; // always move in t
     }
-    return res;
+
+    return i === s.length;
 }
-console.log(square(arr));
+ console.log(subsequence(s,t))
