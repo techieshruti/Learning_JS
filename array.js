@@ -663,32 +663,31 @@
 
 // LC 1- two sum 
 let nums = [2,7,11,15];
-let target = 9;
+// let target = 9;
 
-for(let i=0; i<=nums.length-1; i++){
-    for(let j=1; j<=nums.length-1; j++)
-    {
-        let sum = nums[i]+nums[j];
-        if(sum === target){
-            console.log("brute force : ",i,j)
+// for(let i=0; i<=nums.length-1; i++){
+//     for(let j=1; j<=nums.length-1; j++)
+//     {
+//         let sum = nums[i]+nums[j];
+//         if(sum === target){
+//             console.log("brute force : ",i,j)
+//         }
+//     }
+// }
+let arr =[1,2,7,11,15];
+let target =13;
+function twoSum(arr, target){
+    let map = new Map();
+    for(let i=0; i<=arr.length-1; i++){
+        let needNum= target-arr[i];
+        if(map.has(needNum)){
+            return [map.get(needNum), i];
         }
+        map.set(arr[i], i);
     }
 }
-
-function twoSum(nums, target) {
-    let map = new Map(); // value → index
-
-    for (let i = 0; i < nums.length; i++) {
-        let need = target - nums[i];
-
-        if (map.has(need)) {
-            return [map.get(need), i];
-        }
-
-        map.set(nums[i], i);
-    }
-}
-console.log("Optimized :",twoSum(nums, target))
+    
+console.log(twoSum(arr, target))
 
 
 // LC 167 - two sum ll input array is sorted
