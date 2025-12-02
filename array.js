@@ -674,20 +674,31 @@ let nums = [2,7,11,15];
 //         }
 //     }
 // }
-let arr =[1,2,7,11,15];
-let target =13;
-function twoSum(arr, target){
-    let map = new Map();
-    for(let i=0; i<=arr.length-1; i++){
-        let needNum= target-arr[i];
-        if(map.has(needNum)){
-            return [map.get(needNum), i];
-        }
-        map.set(arr[i], i);
-    }
-}
+let arr =[2,7,11,15];
+let target =9;
+// function twoSum(arr, target){
+//     let map = new Map();
+//     for(let i=0; i<=arr.length-1; i++){
+//         let needNum= target-arr[i];
+//         if(map.has(needNum)){
+//             return [map.get(needNum), i];
+//         }
+//         map.set(arr[i], i);
+//     }
+// }
     
-console.log(twoSum(arr, target))
+// console.log(twoSum(arr, target))
 
 
 // LC 167 - two sum ll input array is sorted
+function twoSumll(arr, target){
+    let map = new Map();
+for (let i=0; i<=arr.length-1; i++){
+    let needNum=target-arr[i];
+    if(map.has(needNum)){
+        return [map.get(needNum),i+1]
+    }
+    map.set(arr[i], i+1)
+}
+}
+console.log(twoSumll(arr, target))
