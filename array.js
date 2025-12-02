@@ -674,8 +674,8 @@ let nums = [2,7,11,15];
 //         }
 //     }
 // }
-let arr =[2,7,11,15];
-let target =9;
+// let arr =[3,5,1,9,7,15,2];
+// let target =9;
 // function twoSum(arr, target){
 //     let map = new Map();
 //     for(let i=0; i<=arr.length-1; i++){
@@ -691,14 +691,19 @@ let target =9;
 
 
 // LC 167 - two sum ll input array is sorted
-function twoSumll(arr, target){
-    let map = new Map();
-for (let i=0; i<=arr.length-1; i++){
-    let needNum=target-arr[i];
-    if(map.has(needNum)){
-        return [map.get(needNum),i+1]
+let numbers = [2,7,11,15];
+let target = 9
+function twoSumll(numbers, target){
+   let L=0; let R=numbers.length-1;
+   while(L<R){
+    let sum = numbers[L]+numbers[R];
+    if(sum === target){
+        return [L+1, R+1];
     }
-    map.set(arr[i], i+1)
+    if (sum < target){
+        L++;
+    }
+    else R--;
+   }
 }
-}
-console.log(twoSumll(arr, target))
+console.log(twoSumll(numbers, target))
