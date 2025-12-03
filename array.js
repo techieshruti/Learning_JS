@@ -691,19 +691,40 @@ let nums = [2,7,11,15];
 
 
 // LC 167 - two sum ll input array is sorted
-let numbers = [2,7,11,15];
-let target = 9
-function twoSumll(numbers, target){
-   let L=0; let R=numbers.length-1;
-   while(L<R){
-    let sum = numbers[L]+numbers[R];
-    if(sum === target){
-        return [L+1, R+1];
+// let numbers = [2,7,11,15];
+// let target = 9
+// function twoSumll(numbers, target){
+//    let L=0; let R=numbers.length-1;
+//    while(L<R){
+//     let sum = numbers[L]+numbers[R];
+//     if(sum === target){
+//         return [L+1, R+1];
+//     }
+//     if (sum < target){
+//         L++;
+//     }
+//     else R--;
+//    }
+// }
+// console.log(twoSumll(numbers, target))
+
+//Longest Substring Without Repeating Characters
+let s = "abcabcbb";
+function lengthOfLongestSubstring(s) {
+    let left = 0;
+    let set = new Set();
+    let maxLen = 0;
+
+    for (let right = 0; right < s.length; right++) {
+        while (set.has(s[right])) {
+            set.delete(s[left]);
+            left++;
+        }
+
+        set.add(s[right]);
+        maxLen = Math.max(maxLen, right - left + 1);
     }
-    if (sum < target){
-        L++;
-    }
-    else R--;
-   }
+
+    return maxLen;
 }
-console.log(twoSumll(numbers, target))
+console.log(lengthOfLongestSubstring(s))
