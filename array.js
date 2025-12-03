@@ -727,4 +727,4 @@ function lengthOfLongestSubstring(s) {
 
     return maxLen;
 }
-console.log(lengthOfLongestSubstring())
+console.log(lengthOfLongestSubstring(s))
