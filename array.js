@@ -721,7 +721,7 @@ function lengthOfLongestSubstring(s) {
             left++;
         }
 
-        
+        set.add(s[right]);
         maxLen = Math.max(maxLen, right - left + 1);
     }
 
